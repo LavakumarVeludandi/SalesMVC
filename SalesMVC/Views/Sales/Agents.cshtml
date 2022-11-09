@@ -1,0 +1,34 @@
+﻿@model List<FirstMVCApp.Models.SalesAgentViewModel>
+
+<h3>Sales agents details</h3>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var agents in Model)
+            {
+                <tr>
+
+                    <th scope="row">@agents.Id</th>
+                    <td>@agents.Name</td>
+                    <td>@agents.Age</td>
+                    <td>
+                        <a type="button"  asp-area="" asp-controller="Sales" asp-action="Delete" >Delete</a>
+                        &nbsp;
+                        <a type="button"  asp-area="" asp-controller="Sales" asp-action="Update">Update</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="container">
+        <a type="button" class="btn btn-primary btn-lg" asp-area="" asp-controller="Sales" asp-action="Create">Add new Agent</a>
+    </div>
+</div>

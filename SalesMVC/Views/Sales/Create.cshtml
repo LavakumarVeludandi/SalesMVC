@@ -1,0 +1,43 @@
+﻿@model SalesAgentViewModel
+
+<h1>Add new agent </h1>
+<hr />
+<div class="row" style="display: flex; justify-content: center">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header" style="display: flex; justify-content: center">
+                <h3> Fill the following details</h3>
+            </div>
+            <div class="card-body">
+                <form asp-controller="Sales" asp-action="CreateAgent" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Id</label>
+                        <input asp-for=Id type="number" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input asp-for=Name type="text" class="form-control" placeholder="xxx"/>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Age</label>
+                        <input asp-for=Age type="number" class="form-control" />
+                    </div>
+                    <div class="container">
+                        <div class="col-mb-6">
+                            <input type="submit" class="btn btn-primary" value="Done">
+                            &nbsp;
+                            <input class="btn btn-warning" type="reset" value="Reset" />
+                            <div style="display:flex;justify-content:flex-end">
+                                    <input type="button" class="btn" style="text-decoration: underline; " asp-controller="Sales" asp-action="Agents" value="Go Back" />
+                            </div>
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                
+            </div>
+        </div>
+    </div>
+</div>
