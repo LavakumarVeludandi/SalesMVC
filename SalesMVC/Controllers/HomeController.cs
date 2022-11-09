@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using FirstMVCApp.Models;
+using SalesMVC.Models;
 
-namespace FirstMVCApp.Controllers;
+namespace SalesMVC.Controllers;
 
 public class HomeController : Controller
 {
@@ -14,6 +14,11 @@ public class HomeController : Controller
     }
 
     public IActionResult Index()
+    {
+        return View();
+    }
+
+    public IActionResult Privacy()
     {
         return View();
     }
